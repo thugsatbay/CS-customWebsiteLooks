@@ -1,0 +1,83 @@
+body 
+{
+	width: 100%;
+	height: 100%;
+	min-width: 1024px;
+	margin: 0px;
+	padding: 0px;
+}
+#page 
+{
+	min-width: 640px;
+	max-width: 1024px;
+	min-height: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	background-color: #EEEEEE;
+	position: relative;
+	top: 50px;
+	z-index: 0;
+	box-shadow: 0em 0.1875em 0.3em 3px rgb(88, 88, 88);
+}
+#upper_head
+{
+	width: 100%;
+	height: 50px;
+	margin: 0px;
+	position: fixed;
+	background: -moz-linear-gradient(center top , rgb(0, 74, 99), rgb(5, 60, 80)) repeat scroll 0% 0% transparent;
+	background: linear-gradient(center top , rgb(0, 74, 99), rgb(5, 60, 80)) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(center top , rgb(0, 74, 99), rgb(5, 60, 80)) repeat scroll 0% 0% transparent;
+	background: -webkit-linear-gradient(center top , rgb(0, 74, 99), rgb(5, 60, 80)) repeat scroll 0% 0% transparent;
+	background: -ms-linear-gradient(center top , rgb(0, 74, 99), rgb(5, 60, 80)) repeat scroll 0% 0% transparent;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(0, 74, 99)), to(rgb(5, 60, 80)));
+	z-index: 2;
+	color: #FFFFFF; 
+	font-family: 'Verdana';
+	font-size: 20px;
+}
+
+#lower_head
+{
+	color: #000000; 
+	width: 100%;
+	height: 20px;
+	margin: 0px;
+	position: relative;
+	top: 50px;
+	background: -moz-linear-gradient(center top , rgb(247, 247, 247), rgb(199, 199, 199)) repeat scroll 0% 0% transparent;
+	background: linear-gradient(center top , rgb(247, 247, 247), rgb(199, 199, 199)) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(center top , rgb(247, 247, 247), rgb(199, 199, 199)) repeat scroll 0% 0% transparent;
+	background: -webkit-linear-gradient(center top , rgb(247, 247, 247), rgb(199, 199, 199)) repeat scroll 0% 0% transparent;
+	background: -ms-linear-gradient(center top , rgb(247, 247, 247), rgb(199, 199, 199)) repeat scroll 0% 0% transparent;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(247, 247, 247)), to(rgb(199, 199, 199)));
+	z-index: 1;
+	margin-bottom: 0px;
+	box-shadow: 0em 0em 0.1875em 0em rgb(0, 74, 99);
+}
+#upper_head a
+{
+	text-decoration:none;
+	color: #FFFFFF; 
+}
+#lower_head a
+{
+	text-decoration:none;
+	text-transform:uppercase;
+	color: rgb(82,82,82); 
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 12px;
+}
+#lower_head a:hover
+{
+	color:rgb(58,169,208);
+}
+#home_menu0, #home_menu1, #home_menu2, #home_menu3
+{
+	display:none;
+}
+

@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>thugs@bay</title>
+<link rel="icon" type="image/ico" href="favicon\atom.ico">
+<link rel="stylesheet" type="text/css" href="master_page.css">
+<script type="text/javascript" src="Javascript/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {  
+//alert("Javascript Loaded");
+ var position_this_off,position_flash,width_this,temp;
+ flash();
+ 
+	//Stop Flash when left of menu 
+	$("#menu0,#menu1,#menu2,#menu3").mouseenter(function()
+		{
+			$("#home_menu"+$(this).data('type')).slideDown();
+			$("#title"+$(this).data('type')).css("background-color","#000000");
+
+			$(".flash").stop(true,false);	
+			position_flash=$(".flash").position();
+			position_this_off=$("#menu"+$(this).data('type')).offset();
+			width_this=$("#menu"+$(this).data('type')).width();
+			position_this_off.left+=(width_this-50)/2;
+			temp=position_this_off.left-position_flash.left;
+			temp=Math.abs(temp);
+			temp*=5000;
+			temp/=1400;
+			$(".flash").animate({left:position_this_off.left+"px"},temp,"linear");
+
+		}
+	);
+
+	//Stop Flash when right of menu
+	$("#menu0,#menu1,#menu2,#menu3").mouseleave(function()
+		{
+			$("#home_menu"+$(this).data('type')).slideUp();
+			$("#title"+$(this).data('type')).css("background-color","rgba(0,0,0,0)");
+			$(".flash").stop(true,false);
+			position_flash=$(".flash").position();
+			temp=1400-position_flash.left;
+			temp*=5000;
+			temp/=1400;
+			$(".flash").animate({left:"1400px"},temp,"linear",flash);
+		}
+	);
+});
+
+function flash()
+{
+	$("#upper_head .flash").css("left","-50px");
+	$(".flash").animate({left:'1400px'},5000,"linear",flash);	
+}
+
+</script>
+</head>
+
+<body>
+<div id="upper_head">
+
+	<div class="flash" style="background-color:rgba(143,191,190,.7); float:left; z-index:2; width:50px; height:3px; position:absolute; left:0px;"></div>
+	<div class="flash" style="background-color:rgba(143,191,190,.7); float:left; z-index:2; width:50px; height:3px; position:absolute; left:0px; top:47px;"></div>
+
+	<div id="inside_upper_head" style="max-width:1075px; min-width:640px; margin:auto;">
+
+		<img src="favicon/g_blue.png" width="50px" height="50px" style="float:left; margin-left:0%;" style="background-color:rgba(143,190,191,.5);">
+		<img src="favicon/g_blue.png" width="50px" height="50px" style="float:right; margin-right:0%;">
+
+		<div id="menu0" data-type="0" style="position:relative; top:10px; margin-left:7%; width:80px; height:30px; float:left; ">
+			<a id="title0" href="index.html" style="padding:5px; margin-bottom:0px; ">Home&#x25BC;</a>
+			<ul id="home_menu0" style="z-index:3; width:125px; height:100px; list-style-type:square; background-color: rgb(0, 0, 0); margin-top:0px; font-size:15px;">
+				<li style="margin:0px; padding:15px 0px 5px 0px;"><a href="index.html">Main Page</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Tutorial</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Aptitiude Q&A</a></li>
+			</ul>
+		</div>
+
+		<div id="menu1" data-type="1" style="position:relative; top:10px; margin-left:7%; width:100px; height:30px; float:left; ">
+			<a id="title1" href="index.html" style="padding:5px; margin-bottom:0px; ">Content&#x25BC;</a>
+			<ul id="home_menu1" style="z-index:3; width:125px; height:100px; list-style-type:square; background-color: rgb(0,0,0); margin-top:0px; font-size:15px;">
+				<li style="margin:0px; padding:15px 0px 5px 0px;"><a href="index.html">Sketches</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Flash Work</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">3Ds Max</li>
+			</ul>
+		</div>
+
+		<div id="menu2" data-type="2" style="position:relative; top:10px; margin-left:7%; width:120px; height:30px; float:left; ">
+			<a id="title2" href="index.html" style="padding:5px; margin-bottom:0px; ">About-Me&#x25BC;</a>
+			<ul id="home_menu2" style="z-index:3; width:125px; height:100px; list-style-type:square; background-color: rgb(0,0,0); margin-top:0px; font-size:15px;">
+				<li style="margin:0px; padding:15px 0px 5px 0px;"><a href="index.html">Bio Data</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Website</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Contact Me</a></li>
+			</ul>
+		</div>
+
+		<div id="menu3" data-type="3" style="position:relative; top:10px; margin-left:7%; width:200px; height:30px; float:left; ">
+			<a id="title3" href="index.html" style="padding:5px; margin-bottom:0px; ">Downloads/Games&#x25BC;</a>
+			<ul id="home_menu3" style="z-index:3; width:125px; height:100px; list-style-type:square; background-color: rgb(0,0,0); margin-top:0px; font-size:15px;">
+				<li style="margin:0px; padding:15px 0px 5px 0px;"><a href="index.html">Software</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Projects</a></li>
+				<li style=" margin:0px; padding:5px 0px 5px 0px;"><a href="index.html">Games</a></li>
+			</ul>
+		</div>
+
+		<div id="login" style="position:relative; margin-left:6%; float:left; ">
+			<a href="login.html"><img src="login.png" width=50px; height=50px;></a>
+		</div>
+	</div>
+</div>
+
+<div id="lower_head">
+	<div id="inside_inner_head" style="max-width:1024px; min-width:640px; margin:auto;">
+		<a id="inner_menu" href="home/tutorail.html">Tutorial</a>
+		<a href="content/sketches.html">Sketches</a>
+		<a href="content/flash.html">Flash Content</a>
+		<a href="content/3Ds.html">3Ds Work</a>
+		<a href="downloads/games.html">Games</a>
+		<a href="login.html">Login</a>
+	</div>
+</div>
+<div id="page">
+Website
+</div>
+</body>
+</html>
